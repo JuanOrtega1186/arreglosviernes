@@ -29,32 +29,38 @@ public class Arreglos {
         
         Scanner entrada = new Scanner(System.in);
         
-        int [] numeros = new int [4];
+        Persona [] personas = new Persona [4];
         //tipo,nombre           cuantos va a tener
         
         //NOTAS: SIEMPRE QUE LLAME UNA CAJA DEBO EMPEZAR POR EL ARREGLO
         
-        numeros[0] = 1;
+        /*numeros[0] = 1;
         numeros[1] = 1;
         numeros[2] = 1;
-        numeros[3] = 1;
+        numeros[3] = 1;*/
         
         
         //el FOR hace un recorrido
-        for(int i = 0; i<numeros.length; i++){
+        for(int i = 0; i<personas.length; i++){
             
-            System.out.println("Digita el dato: " +i);
-            numeros[i]= entrada.nextInt();
+            personas[i] = new Persona();
+            
+            System.out.println("Digita el nombre de la persona: " +i);
+            personas[i].setNombre(entrada.next());
         }
         
         System.out.println("***********");
         
-        
-        for(int i = 0; i<numeros.length; i++){
+        for(int i = 0; i<personas.length; i++){
             
-            System.out.println(numeros[i]);
+            
+            
+            System.out.println(personas[i].getNombre());
             
         }
+        
+        System.out.println("***********");
+        
     }
     
 }
